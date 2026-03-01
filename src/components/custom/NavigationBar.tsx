@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Instagram, Linkedin, Twitter } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navItems = [
   { href: "#home", label: "Home" },
@@ -20,9 +21,8 @@ export default function NavigationBar() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo / Brand */}
-        <a href="/" className="flex items-center space-x-2 font-bold text-xl md:text-2xl">
-          SFMS
-          {/* <img src="/logo.svg" alt="SFMS" className="h-8 w-auto" /> */}
+        <a href="/" className="flex items-center">
+          <img src={logo} alt="SFMS" className="h-14 w-auto" />
         </a>
 
         {/* Desktop Navigation */}
@@ -84,9 +84,11 @@ export default function NavigationBar() {
 
             <SheetContent side="right" className="w-[85%] max-w-[320px] sm:max-w-[360px] p-0">
               <div className="flex flex-col h-full">
-                {/* Header / Brand in mobile menu */}
+                {/* Header / Logo in mobile menu */}
                 <div className="p-6 border-b">
-                  <h2 className="text-2xl font-bold">SFMS</h2>
+                  <a href="/" onClick={() => setOpen(false)}>
+                    <img src={logo} alt="SFMS" className="h-7 w-auto" />
+                  </a>
                 </div>
 
                 {/* Navigation links - takes available space */}

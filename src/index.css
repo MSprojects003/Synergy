@@ -133,3 +133,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+#root{
+  padding:0 !important;
+}
+
+@media (max-width: 1024px) {
+  #services {
+    padding: 0 1rem !important;
+    margin-top: 1rem !important;
+    margin-bottom: -1rem !important;
+  }
+  .sub-text{
+    display: none !important  ;
+  }
+}

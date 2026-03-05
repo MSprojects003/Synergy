@@ -1,6 +1,10 @@
  
 import { Card, CardContent } from "@/components/ui/card";
- 
+import service1 from "@/assets/pictures/service/service1.jpeg"
+import service2 from "@/assets/pictures/service/service2.jpeg"
+import service3 from "@/assets/pictures/service/service3.jpeg"
+import service4 from "@/assets/pictures/service/service4.jpeg" 
+import service5 from "@/assets/pictures/service/service5.jpeg"
 
 const services = [
   {
@@ -8,23 +12,21 @@ const services = [
      
     description: "Comprehensive waste handling and disposal solutions designed to support  operational efficiency,envirmental responsibility, and regular compliance.",
     
-    imageUrl: "https://thumbs.dreamstime.com/b/new-phone-model-captured-multiple-angles-ad-ready-layout-new-phone-model-captured-multiple-angles-ad-ready-layout-401654722.jpg",
-    alt: "Smartphones",
+imageUrl:service1,    alt: "Smartphones",
   },
   {
     title: "Professional Janitorial Services",
     
     description: "End-to-end janitorial services that ensure a clean, healthy, and welcoming environment for your employees and visitors.",
      
-    imageUrl: "https://thumbs.dreamstime.com/b/wireless-over-ear-headphones-vibrant-color-explosion-background-stylish-pair-showcased-against-dynamic-backdrop-366208760.jpg",
-    alt: "Headphones",
+imageUrl:service3  ,  alt: "Headphones",
   },
   {
     title: "Pop-up Vas ",
    
     description: "On-demand, short-term deployment of compliant teams for rapid on-site value-added services, including stickering for packaging, relabeling, rework, and other customized packaging and labeling requirements.",
     
-    imageUrl: "https://m.media-amazon.com/images/I/81N1pwfMR6L._AC_UF1000,1000_QL80_.jpg",
+    imageUrl:  service2,
     alt: "Speakers",
   },
   {
@@ -32,7 +34,7 @@ const services = [
     
     description: "Professional coordination and execution of corporate and operational events with a focus on compliance, safety, and reliable delivery.",
    
-    imageUrl: "https://thumbs.dreamstime.com/b/smartwatch-modern-design-digital-display-dark-background-featuring-showcased-against-ideal-themes-related-to-362622389.jpg",
+    imageUrl:  service5,
     alt: "Smartwatches",
   },
   {
@@ -40,7 +42,7 @@ const services = [
      
     description: "Strategic workforce planning and technology-integrated solutions built around each client’s unique operational challenges and compliance needs.",
      
-    imageUrl: "https://cdn.thewirecutter.com/wp-content/media/2025/12/BEST-ANDROID-TABLETS-2048px-00133-2x1-1.jpg?auto=webp&quality=75&width=1200",
+    imageUrl: service4,
     alt: "Tablets",
   },
 ];

@@ -6,6 +6,8 @@ import { Separator } from "@/components/ui/separator";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
+import about1 from "@/assets/pictures/about1.jpeg"
+import about2 from "@/assets/pictures/about2.avif"
 // ── Counter hook ──────────────────────────────────────────────────────────────
 function useCountUp(target: number, duration = 1800, start = false) {
   const [count, setCount] = useState(0);
@@ -166,10 +168,10 @@ export default function About() {
 
             {/* Right — Image */}
             <div className="order-1 md:order-2 h-56 md:h-auto min-h-[300px] bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">
-              {/*
-                Replace with your actual image:
-                <img src="/about-hero.jpg" alt="About" className="w-full h-full object-cover" />
-              */}
+              
+                
+                <img src={about1} alt="About" className="w-full h-full object-cover" />
+             
               <svg className="w-16 h-16 text-slate-400 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="0.8">
                 <circle cx="12" cy="8" r="4" />
                 <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
@@ -187,10 +189,9 @@ export default function About() {
 
             {/* Left — Image */}
             <div className="h-56 md:h-auto min-h-[300px] bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">
-              {/*
-                Replace with your actual image:
-                <img src="/about-team.jpg" alt="Team" className="w-full h-full object-cover" />
-              */}
+              
+                <img src={about2} alt="Team" className="w-full h-full object-cover" />
+             
               <svg className="w-16 h-16 text-slate-400 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="0.8">
                 <circle cx="12" cy="8" r="4" />
                 <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />

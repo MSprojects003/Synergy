@@ -8,7 +8,7 @@ import { Menu,  Facebook, Mail, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const navItems = [
-  { href: "#home", label: "Home" },
+  { href: "/", label: "Home" },
   { href: "#services", label: "Services" },
   { href: "#careers", label: "Careers" },
   { href: "#about", label: "About Us" },
@@ -98,7 +98,7 @@ export default function NavigationBar() {
                       key={item.href}
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="text-xl sm:text-2xl font-medium transition-colors hover:text-primary text-foreground/90 hover:text-foreground"
+                      className="text-xl sm:text-lg font-medium transition-colors hover:text-primary text-foreground/90 hover:text-foreground"
                     >
                       {item.label}
                     </a>

@@ -98,7 +98,7 @@ export default function NavigationBar() {
                       key={item.href}
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="text-xl sm:text-lg font-medium transition-colors hover:text-primary text-foreground/90 hover:text-foreground"
+                      className="text-md sm:text-md font-medium transition-colors hover:text-primary text-foreground/90 hover:text-foreground"
                     >
                       {item.label}
                     </a>

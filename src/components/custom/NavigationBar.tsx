@@ -49,7 +49,7 @@ export default function NavigationBar() {
               href="https://wa.me/+94762146244"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Instagram"
+              aria-label="whatsapp"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <MessageCircle className="h-5 w-5" />
@@ -58,7 +58,7 @@ export default function NavigationBar() {
               href="mailto:synergyfmservices@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn"
+              aria-label="Mail"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <Mail className="h-5 w-5" />
@@ -67,7 +67,7 @@ export default function NavigationBar() {
               href="https://www.facebook.com/share/1HbFa3k3PW/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="X"
+              aria-label="Facebook"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
               <Facebook className="h-5 w-5" />
@@ -108,33 +108,33 @@ export default function NavigationBar() {
                 {/* Social icons at the bottom */}
                 <div className="px-6 py-8 border-t bg-muted/30">
                   <div className="flex justify-center gap-10">
-                    <a
-                      href="https://instagram.com/yourprofile"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Instagram"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <Instagram className="h-7 w-7" />
-                    </a>
-                    <a
-                      href="https://linkedin.com/company/yourcompany"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="LinkedIn"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <Linkedin className="h-7 w-7" />
-                    </a>
-                    <a
-                      href="https://x.com/yourhandle"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="X"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                    >
-                      <Twitter className="h-7 w-7" />
-                    </a>
+                     <a
+              href="https://wa.me/+94762146244"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="whatsapp"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <MessageCircle className="h-5 w-5" />
+            </a>
+            <a
+              href="mailto:synergyfmservices@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Mail"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Mail className="h-5 w-5" />
+            </a>
+            <a
+              href="https://www.facebook.com/share/1HbFa3k3PW/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <Facebook className="h-5 w-5" />
+            </a>
                   </div>
                 </div>
               </div>

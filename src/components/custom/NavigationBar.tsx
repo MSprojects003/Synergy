@@ -4,7 +4,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Instagram, Linkedin, Twitter, Facebook, Mail, MessageCircle } from "lucide-react";
+import { Menu,  Facebook, Mail, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const navItems = [

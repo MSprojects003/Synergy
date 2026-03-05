@@ -37,7 +37,7 @@ export default function Banner() {
               textShadow: "0 0 12px rgba(0,0,0,0.8)",
             }}
           >
-            Welcome to SFMS
+            Welcome to Synergy
             <br className="sm:hidden md:block" />
             <span className="text-[#18181808] [-webkit-text-stroke:1px_white] text-stroke-[1px] text-stroke-white">
               Build Your Future
@@ -53,6 +53,7 @@ export default function Banner() {
 
           {/* Buttons – stack on very small screens, side-by-side otherwise */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+            <a href=" #careers">
             <Button
               size="lg"
               className="text-base sm:text-lg px-7 sm:px-9 border-primary border-2  sm:py-6 
@@ -62,8 +63,9 @@ export default function Banner() {
             >
               Explore Careers
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-
+            </Button></a>
+      
+           <a href="#contact">
             <Button
               size="lg"
               variant="outline"
@@ -74,7 +76,7 @@ export default function Banner() {
             >
               <Mail className="mr-2 h-5 w-5" />
               Contact Us
-            </Button>
+            </Button></a>
           </div>
         </div>
       </div>

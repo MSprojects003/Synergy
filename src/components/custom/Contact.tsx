@@ -6,18 +6,18 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { Phone, Mail, MessageSquare, Facebook, Twitter, Linkedin } from "lucide-react";
+import { Phone, Mail, MessageSquare, Facebook,   MailCheck, MessageCircle } from "lucide-react";
 
 const contactInfo = [
   {
     icon: Phone,
     title: "Call our support center",
-    detail: "+52656-565-560",
+    detail: "+94 76 2146 244",
   },
   {
     icon: Mail,
     title: "Email our support center",
-    detail: "support@spark.com",
+    detail: "synergyfmservices@gmail.com",
   },
   {
     icon: MessageSquare,
@@ -35,13 +35,55 @@ export default function Contact() {
     message: "",
   });
 
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [message, setMessage] = useState("");
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  ) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // handle submission
+    setStatus("loading");
+    setMessage("");
+
+    try {
+      const formData = new FormData(e.target as HTMLFormElement);
+
+      // Optional: add extra fields if you want
+      // formData.append("from_name", `${form.firstName} ${form.lastName}`);
+      // formData.append("subject", form.subject);
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      const json = await response.json();
+
+      if (json.success) {
+        setStatus("success");
+        setMessage("Thank you! Your message has been sent.");
+        setForm({
+          firstName: "",
+          lastName: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setStatus("error");
+        setMessage(json.message || "Something went wrong. Please try again.");
+      }
+    } catch (err) {
+      setStatus("error");
+      setMessage("Network error. Please check your connection.");
+    }
   };
 
   return (
@@ -54,30 +96,20 @@ export default function Contact() {
 
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-4">
 
-        {/* ── LEFT PANEL ── */}
+        {/* LEFT PANEL - unchanged */}
         <div className="flex flex-col gap-4">
-
-          {/* Map */}
-
           <Card className="rounded-2xl border-0 shadow-none overflow-hidden">
             <CardContent className="p-0">
               <div className="w-full h-48 bg-slate-200 overflow-hidden">
-                <iframe
-                  title="Location Map"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
+             
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7920.6863201921!2d79.91336145025052!3d6.968782119493024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2581de3230199%3A0xd3f291b0a1cf61ec!2s382%20Old%20Kandy%20Rd%2C%20Kelaniya%2011300!5e0!3m2!1sen!2slk!4v1772720396272!5m2!1sen!2slk" width="100%" height="100%"     style={{ border: 0 }}
                   loading="lazy"
-                  allowFullScreen
-                  referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.690732217544!2d-0.02327!3d51.50501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487602b9a65c4249%3A0x2e77e6f6d00b9b5e!2sOne%20Canada%20Square!5e0!3m2!1sen!2suk!4v1680000000000!5m2!1sen!2suk"
-                />
+                  allowFullScreen  ></iframe>
               </div>
             </CardContent>
           </Card>
           <hr />
 
-          {/* Location + Contact Details */}
           <Card className="rounded-2xl border-0 shadow-none">
             <CardContent className="p-6 flex flex-col gap-5">
               <div>
@@ -85,7 +117,9 @@ export default function Contact() {
                   Our Location to Head Quarter
                 </h3>
                 <p className="text-sm text-gray-500 text-left font-thin leading-relaxed">
-                  Level 9, One Canada Square, Canary Wharf, E14 5AA, London.
+                   No 391/1, Dalugamgoda,
+                   Old Kandy road, Kelaniya,
+                    Sri Lanka 
                 </p>
               </div>
 
@@ -105,12 +139,11 @@ export default function Contact() {
                 ))}
               </div>
 
-              {/* Social Icons */}
               <div className="flex gap-2 pt-1">
                 {[
-                  { icon: Facebook, href: "#" },
-                  { icon: Twitter, href: "#" },
-                  { icon: Linkedin, href: "#" },
+                  { icon: Facebook, href: "https://www.facebook.com/share/1HbFa3k3PW/" },
+                  { icon: MailCheck, href: "mailto:synergyfmservices@gmail.com" },
+                  { icon: MessageCircle, href: "https://wa.me/+94762146244" },
                 ].map(({ icon: Icon, href }, i) => (
                   <a
                     key={i}
@@ -125,12 +158,26 @@ export default function Contact() {
           </Card>
         </div>
 
-        {/* ── RIGHT PANEL ── */}
+        {/* RIGHT PANEL - Form with Web3Forms */}
         <Card className="rounded-2xl border-0 py-4 pb-4 shadow-sm h-fit">
           <CardContent className="p-6 md:p-8">
-            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+            <form
+              onSubmit={handleSubmit}
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              className="flex flex-col gap-6"
+            >
+              {/* Hidden Access Key – REPLACE THIS */}
+              <input
+                type="hidden"
+                name="access_key"
+                value="ecd76787-8f56-47a0-a129-2becbe3e7c7e" // ← Paste your real key here
+              />
 
-              {/* Section 1 — Query */}
+              {/* Optional: helps organize emails better */}
+              <input type="hidden" name="subject" value={form.subject || "New Contact Query"} />
+              <input type="hidden" name="from_name" value={`${form.firstName} ${form.lastName}`} />
+
               <div>
                 <h2 className="text-2xl font-thin text-left text-gray-900 mb-1">
                   Send us your Query here
@@ -140,7 +187,6 @@ export default function Contact() {
                 </p>
               </div>
 
-              {/* Name row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
                   <Label htmlFor="firstName" className="text-xs font-semibold text-gray-700">
@@ -172,7 +218,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Email + Subject row */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
                   <Label htmlFor="email" className="text-xs font-semibold text-gray-700">
@@ -204,12 +249,10 @@ export default function Contact() {
                   />
                 </div>
               </div>
-              
-              <hr />
-              
 
-              {/* Section 2 — Help */}
-              <div >
+              <hr />
+
+              <div>
                 <h2 className="text-2xl font-thin text-left text-gray-900 mb-1">
                   How can we help?
                 </h2>
@@ -218,7 +261,6 @@ export default function Contact() {
                 </p>
               </div>
 
-              {/* Message */}
               <div className="flex flex-col gap-1.5">
                 <Label htmlFor="message" className="text-xs font-semibold text-gray-700">
                   Comments / Questions <span className="text-red-400">*</span>
@@ -231,22 +273,35 @@ export default function Contact() {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="rounded-lg border-gray-200 text-sm resize-none border-1 focus-visible:ring-gray-800"
+                  className="rounded-lg border-gray-200 text-sm resize-none focus-visible:ring-gray-800"
                 />
               </div>
 
-              {/* Submit */}
+              {/* Status message */}
+              {status !== "idle" && (
+                <div
+                  className={`text-sm p-3 rounded ${
+                    status === "success"
+                      ? "bg-green-100 text-green-800"
+                      : status === "error"
+                      ? "bg-red-100 text-red-800"
+                      : "bg-gray-100 text-gray-800"
+                  }`}
+                >
+                  {status === "loading" ? "Sending..." : message}
+                </div>
+              )}
+
               <Button
                 type="submit"
+                disabled={status === "loading"}
                 className="w-fit rounded-lg bg-gray-900 hover:bg-gray-800 text-white text-sm font-bold px-7 h-10 shadow-none"
               >
-                Send Message
+                {status === "loading" ? "Sending..." : "Send Message"}
               </Button>
-
             </form>
           </CardContent>
         </Card>
-
       </div>
     </section>
   );

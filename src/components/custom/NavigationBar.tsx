@@ -4,7 +4,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Menu, Instagram, Linkedin, Twitter, Facebook, Mail, MessageCircle } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const navItems = [
@@ -46,31 +46,31 @@ export default function NavigationBar() {
           {/* Desktop social icons */}
           <div className="hidden md:flex items-center gap-5">
             <a
-              href="https://instagram.com/yourprofile"
+              href="https://wa.me/+94762146244"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              <Instagram className="h-5 w-5" />
+              <MessageCircle className="h-5 w-5" />
             </a>
             <a
-              href="https://linkedin.com/company/yourcompany"
+              href="mailto:synergyfmservices@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              <Linkedin className="h-5 w-5" />
+              <Mail className="h-5 w-5" />
             </a>
             <a
-              href="https://x.com/yourhandle"
+              href="https://www.facebook.com/share/1HbFa3k3PW/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="X"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              <Twitter className="h-5 w-5" />
+              <Facebook className="h-5 w-5" />
             </a>
           </div>
 

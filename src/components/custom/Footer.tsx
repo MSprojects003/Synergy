@@ -5,12 +5,14 @@ import {
   Mail,
   Phone,
   MapPin,
-  Twitter,
-  Github,
-  Linkedin,
+  
   ArrowRight,
+  Facebook,
+  MailCheck,
+  PhoneCall,
 } from 'lucide-react'
 import logo from "@/assets/logo2.png";
+ 
 
 // Reusable React Logo component
 const Logo = ({ className }: { className?: string }) => (
@@ -61,9 +63,9 @@ function Footer() {
             {/* Social Links */}
             <div className="flex items-center gap-3 pt-1">
               {[
-                { icon: Twitter, label: 'Twitter', href: '#' },
-                { icon: Github, label: 'GitHub', href: '#' },
-                { icon: Linkedin, label: 'LinkedIn', href: '#' },
+                { icon: Facebook, label: 'facebook', href: 'https://www.facebook.com/share/1HbFa3k3PW/' },
+                { icon: MailCheck, label: 'mail', href: 'mailto:synergyfmservices@gmail.com' },
+                { icon: PhoneCall, label: 'phone', href: 'tel:+94762146244' },
               ].map(({ icon: Icon, label, href }) => (
                 <a
                   key={label}
@@ -72,6 +74,7 @@ function Footer() {
                   className="w-9 h-9 rounded-lg border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-amber-400 hover:border-amber-400/50 transition-all duration-200"
                 >
                   <Icon size={15} />
+                 
                 </a>
               ))}
             </div>
@@ -122,10 +125,10 @@ function Footer() {
                 <div>
                   <p className="text-xs text-zinc-500 mb-0.5">Email</p>
                   <a
-                    href="mailto:hello@synergy.com"
+                    href="mailto:synergyfmservices@gmail.com"
                     className="text-sm text-zinc-300 hover:text-white transition-colors"
                   >
-                    hello@synergy.com
+                  synergyfmservices@gmail.com
                   </a>
                 </div>
               </li>
@@ -134,10 +137,10 @@ function Footer() {
                 <div>
                   <p className="text-xs text-zinc-500 mb-0.5">Phone</p>
                   <a
-                    href="tel:+15551234567"
+                    href="tel:+94762146244"
                     className="text-sm text-zinc-300 hover:text-white transition-colors"
                   >
-                    +1 (555) 123-4567
+                    +94 76 214 6244
                   </a>
                 </div>
               </li>
@@ -146,8 +149,9 @@ function Footer() {
                 <div>
                   <p className="text-xs text-zinc-500 mb-0.5">Office</p>
                   <p className="text-sm text-zinc-300 font-thin leading-snug">
-                    350 Fifth Ave, Suite 100<br />
-                    New York, NY 10118
+                   No 391/1, Dalugamgoda,<br />
+                   Old Kandy road, Kelaniya,<br />
+                    Sri Lanka 
                   </p>
                 </div>
               </li>
@@ -156,40 +160,97 @@ function Footer() {
 
           {/* Newsletter Column */}
           <div className="space-y-5">
-            <h3
-              className="text-xs text-left font-semibold tracking-[0.15em] uppercase text-amber-400"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
-            >
-              Stay Updated
-            </h3>
-            <p
-              className="text-sm text-left text-zinc-400 leading-relaxed"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
-            >
-              Get the latest news and updates delivered straight to your inbox.
-            </p>
-            <div className="flex flex-col gap-2.5">
-              <Input
-                type="email"
-                placeholder="your@email.com"
-                className="bg-zinc-900 border-zinc-800 text-zinc-100 placeholder:text-zinc-600 focus-visible:ring-amber-400 focus-visible:border-amber-400/50 h-10 text-sm"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
-              />
-              <Button
-                className="w-full bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold text-sm h-10 transition-colors duration-200"
-                style={{ fontFamily: "'DM Sans', sans-serif" }}
-              >
-                Subscribe
-                <ArrowRight size={14} className="ml-2" />
-              </Button>
-            </div>
-            <p
-              className="text-xs text-zinc-600"
-              style={{ fontFamily: "'DM Sans', sans-serif" }}
-            >
-              No spam, ever. Unsubscribe at any time.
-            </p>
-          </div>
+  <h3
+    className="text-xs text-left font-semibold tracking-[0.15em] uppercase text-amber-400"
+    style={{ fontFamily: "'DM Sans', sans-serif" }}
+  >
+    Stay Updated
+  </h3>
+  <p
+    className="text-sm text-left text-zinc-400 leading-relaxed"
+    style={{ fontFamily: "'DM Sans', sans-serif" }}
+  >
+    Get the latest news and updates delivered straight to your inbox.
+  </p>
+
+  {/* ── Newsletter Form with Web3Forms ── */}
+  <form
+    action="https://api.web3forms.com/submit"
+    method="POST"
+    className="flex flex-col gap-2.5"
+    onSubmit={(e) => {
+      // Optional: tiny client-side feedback (no full state management needed)
+      const email = (e.currentTarget.elements.namedItem("email") as HTMLInputElement)?.value;
+      if (!email) return;
+
+      // You can add simple success alert or toast here if you want
+      // setTimeout(() => alert("Thank you! You've been subscribed."), 800);
+    }}
+  >
+    {/* ── Required: Your Access Key ── */}
+    <input
+      type="hidden"
+      name="access_key"
+      value="ecd76787-8f56-47a0-a129-2becbe3e7c7e" // ← Replace with your real key
+    />
+
+    {/* Customizes the email you receive */}
+    <input
+      type="hidden"
+      name="subject"
+      value="New Newsletter Subscription"
+    />
+    <input
+      type="hidden"
+      name="from_name"
+      value="Synergy Website"
+    />
+
+    {/* Makes reply button in your email go directly to subscriber */}
+    <input
+      type="hidden"
+      name="replyto"
+      value="email" // ← uses the submitted email field
+    />
+
+    {/* Honeypot – very effective basic spam protection (invisible to humans) */}
+    <input
+      type="checkbox"
+      name="botcheck"
+      tabIndex={-1}
+      className="hidden"
+      style={{ display: "none" }}
+      aria-hidden="true"
+    />
+
+    {/* The only visible field */}
+    <Input
+      type="email"
+      name="email"          // ← important: name="email"
+      placeholder="your@email.com"
+      required
+      className="bg-zinc-900 border-zinc-800 text-zinc-100 placeholder:text-zinc-600 focus-visible:ring-amber-400 focus-visible:border-amber-400/50 h-10 text-sm"
+      style={{ fontFamily: "'DM Sans', sans-serif" }}
+    />
+
+    <Button
+      type="submit"
+      className="w-full bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold text-sm h-10 transition-colors duration-200"
+      style={{ fontFamily: "'DM Sans', sans-serif" }}
+    >
+      Subscribe
+      <ArrowRight size={14} className="ml-2" />
+    </Button>
+  </form>
+
+  <p
+    className="text-xs text-zinc-600"
+    style={{ fontFamily: "'DM Sans', sans-serif" }}
+  >
+    No spam, ever. Unsubscribe at any time.
+  </p>
+</div>
+ 
         </div>
 
         <Separator className="bg-zinc-800/60 mb-8" />

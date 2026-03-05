@@ -137,7 +137,7 @@ export default function About() {
                   className="rounded-full bg-gray-900 hover:bg-gray-950 text-white text-sm font-bold px-5 h-10 gap-1.5 shadow-none"
                   asChild
                 >
-                  <a href="#contact">
+                  <a href="#services">
                     Get Started <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 </Button>
@@ -146,7 +146,7 @@ export default function About() {
                   className="rounded-full border-gray-300 text-gray-800 text-sm font-semibold px-5 h-10 hover:bg-gray-50 shadow-none"
                   asChild
                 >
-                  <a href="#jobs">Contact us</a>
+                  <a href="#contact">Contact us</a>
                 </Button>
               </div>
 

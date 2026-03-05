@@ -38,7 +38,7 @@ imageUrl:service3  ,  alt: "Headphones",
     alt: "Smartwatches",
   },
   {
-    title: "Customized Faculity Management",
+    title: "Customized Facility Management",
      
     description: "Strategic workforce planning and technology-integrated solutions built around each client’s unique operational challenges and compliance needs.",
      

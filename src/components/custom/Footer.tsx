@@ -30,7 +30,7 @@ function Footer() {
       className="relative bg-zinc-950 text-zinc-100 overflow-hidden "
     >
       {/* Decorative top border */}
-      <div className="h-px w-7xl bg-gradient-to-r from-transparent via-amber-400 to-transparent" />
+      <div className="h-px w-7xl bg-gradient-to-r from-transparent via-[#059578] to-transparent" />
 
       {/* Subtle background texture */}
       <div
@@ -71,7 +71,7 @@ function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="w-9 h-9 rounded-lg border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-amber-400 hover:border-amber-400/50 transition-all duration-200"
+                  className="w-9 h-9 rounded-lg border border-zinc-800 flex items-center justify-center text-zinc-400 hover:text-[#059578] hover:border-[#059578]/50 transition-all duration-200"
                 >
                   <Icon size={15} />
                  
@@ -83,7 +83,7 @@ function Footer() {
           {/* About Column */}
           <div className="space-y-5">
             <h3
-              className="text-xs text-left font-semibold tracking-[0.15em] uppercase text-amber-400"
+              className="text-xs text-left font-semibold tracking-[0.15em] uppercase text-[#059578]"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
               About
@@ -92,7 +92,7 @@ function Footer() {
               {[
                 { label: 'Our Story', href: '#' },
                 { label: 'Mission & Values', href: '#' },
-                { label: 'The Team', href: '#' },
+                { label: 'Our Team', href: '#our-team' },
                 { label: 'Careers', href: '#careers' },
                 { label: 'Press & Media', href: '#' },
               ].map(({ label, href }) => (
@@ -102,7 +102,7 @@ function Footer() {
                     className="text-sm text-zinc-400 hover:text-white transition-colors duration-150 flex items-center gap-1.5 group"
                   >
                     <span className="w-0 overflow-hidden group-hover:w-3 transition-all duration-200">
-                      <ArrowRight size={11} className="text-amber-400" />
+                      <ArrowRight size={11} className="text-[#059578]" />
                     </span>
                     {label}
                   </a>
@@ -114,14 +114,14 @@ function Footer() {
           {/* Contact Us Column */}
           <div className="space-y-5">
             <h3
-              className="text-xs text-left font-semibold tracking-[0.15em] uppercase text-amber-400"
+              className="text-xs text-left font-semibold tracking-[0.15em] uppercase text-[#059578]"
               style={{ fontFamily: "'DM Sans', sans-serif" }}
             >
               Contact Us
             </h3>
             <ul className="space-y-4" style={{ fontFamily: "'DM Sans', sans-serif" }}>
               <li className="flex items-start text-left gap-3">
-                <Mail size={15} className="text-amber-400 mt-0.5 shrink-0" />
+                <Mail size={15} className="text-[#059578] mt-0.5 shrink-0" />
                 <div>
                   <p className="text-xs text-zinc-500 mb-0.5">Email</p>
                   <a
@@ -133,7 +133,7 @@ function Footer() {
                 </div>
               </li>
               <li className="flex items-start text-left gap-3">
-                <Phone size={15} className="text-amber-400 mt-0.5 shrink-0" />
+                <Phone size={15} className="text-[#059578] mt-0.5 shrink-0" />
                 <div>
                   <p className="text-xs text-zinc-500 mb-0.5">Phone</p>
                   <a
@@ -145,7 +145,7 @@ function Footer() {
                 </div>
               </li>
               <li className="flex items-start text-left gap-3">
-                <MapPin size={15} className="text-amber-400 mt-0.5 shrink-0" />
+                <MapPin size={15} className="text-[#059578] mt-0.5 shrink-0" />
                 <div>
                   <p className="text-xs text-zinc-500 mb-0.5">Office</p>
                   <p className="text-sm text-zinc-300 font-thin leading-snug">
@@ -161,7 +161,7 @@ function Footer() {
           {/* Newsletter Column */}
           <div className="space-y-5">
   <h3
-    className="text-xs text-left font-semibold tracking-[0.15em] uppercase text-amber-400"
+    className="text-xs text-left font-semibold tracking-[0.15em] uppercase text-[#059578]"
     style={{ fontFamily: "'DM Sans', sans-serif" }}
   >
     Stay Updated
@@ -229,13 +229,13 @@ function Footer() {
       name="email"          // ← important: name="email"
       placeholder="your@email.com"
       required
-      className="bg-zinc-900 border-zinc-800 text-zinc-100 placeholder:text-zinc-600 focus-visible:ring-amber-400 focus-visible:border-amber-400/50 h-10 text-sm"
+      className="bg-zinc-900 border-zinc-800 text-zinc-100 placeholder:text-zinc-600 focus-visible:ring-[#059578] focus-visible:border-[#059578]/50 h-10 text-sm"
       style={{ fontFamily: "'DM Sans', sans-serif" }}
     />
 
     <Button
       type="submit"
-      className="w-full bg-amber-400 hover:bg-amber-300 text-zinc-950 font-semibold text-sm h-10 transition-colors duration-200"
+      className="w-full bg-[#059578] hover:bg-amber-300 text-zinc-950 font-semibold text-sm h-10 transition-colors duration-200"
       style={{ fontFamily: "'DM Sans', sans-serif" }}
     >
       Subscribe

@@ -3,6 +3,7 @@ import Banner from '@/components/custom/Banner'
 import Careers from '@/components/custom/Careers'
 import Contact from '@/components/custom/Contact'
 import Footer from '@/components/custom/Footer'
+import OurTeam from '@/components/custom/OurTeam'
 import Services from '@/components/custom/Service'
 
 // ✅ No need to import jobs here — Careers handles that internally
@@ -13,6 +14,7 @@ function Home() {
       <Services />
       <Careers /> {/* ← no props needed */}
       <About />
+      <OurTeam />
       <Contact />
       <Footer />
     </div>

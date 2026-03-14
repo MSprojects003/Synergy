@@ -119,13 +119,13 @@ export default function About() {
             {/* Left — Text */}
             <div className="p-2 md:p-8 flex flex-col justify-left order-2 md:order-1">
               <h1
-                className="text-3xl ml-0 text-left md:text-4xl font-thin tracking-tight leading-tight text-gray-900 mb-3"
+                className="text-3xl ml-0 text-left md:text-4xl font-thin tracking-tight leading-tight text-[#059587] mb-3"
                 style={{ letterSpacing: "-0.03em" }}
               >
                 About us
               </h1>
 
-              <p className="text-sm text-left text-gray-500 leading-relaxed mb-6 max-w-sm">
+              <p className="text-sm text-left text-[#066057] leading-relaxed mb-6 max-w-sm">
                 At our firm, we pride ourselves on delivering tailored solutions
                 that empower businesses to thrive. With years of experience across
                 various industries, our dedicated team is committed to driving
@@ -134,7 +134,7 @@ export default function About() {
 
               <div className="flex items-center gap-3 flex-wrap">
                 <Button
-                  className="rounded-full bg-gray-900 hover:bg-gray-950 text-white text-sm font-bold px-5 h-10 gap-1.5 shadow-none"
+                  className="rounded-full bg-[#059587] hover:bg-[#0d5d55] text-white text-sm font-bold px-5 h-10 gap-1.5 shadow-none"
                   asChild
                 >
                   <a href="#services">
@@ -143,7 +143,7 @@ export default function About() {
                 </Button>
                 <Button
                   variant="outline"
-                  className="rounded-full border-gray-300 text-gray-800 text-sm font-semibold px-5 h-10 hover:bg-gray-50 shadow-none"
+                  className="rounded-full border-[#059587] text-[#059587] text-sm font-semibold px-5 h-10 hover:bg-[#059587] hover:text-white shadow-none"
                   asChild
                 >
                   <a href="#contact">Contact us</a>
@@ -201,13 +201,13 @@ export default function About() {
             {/* Right — Text + Features */}
             <div className="p-2 md:p-10 flex flex-col justify-center">
               <h2
-                className="text-2xl text-left md:text-3xl font-thin tracking-tight leading-tight text-gray-900 mb-3"
+                className="text-2xl text-left md:text-3xl font-thin tracking-tight leading-tight text-[#059587] mb-3"
                 style={{ letterSpacing: "-0.025em" }}
               >
                 Unlock our expertise to drive success across industries.
               </h2>
 
-              <p className="text-sm text-left text-gray-500 leading-relaxed mb-6">
+              <p className="text-sm text-left text-[#066057] leading-relaxed mb-6">
                 Leverage our deep industry knowledge and innovative strategies to
                 accelerate your business growth. Our tailored solutions ensure
                 success across diverse sectors by addressing your unique

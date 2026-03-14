@@ -56,8 +56,8 @@ export default function Banner() {
             <a href=" #careers">
             <Button
               size="lg"
-              className="text-base sm:text-lg px-7 sm:px-9 border-primary border-2  sm:py-6 
-                         bg-primary hover:bg-primary/90 
+              className="text-base sm:text-lg px-7 sm:px-9 border-[#059587] border-2  sm:py-6 
+                         bg-[#059587] hover:bg-[#0d5d55] 
                          text-white font-semibold shadow-md hover:shadow-lg 
                          transition-all duration-300"
             >
@@ -70,8 +70,8 @@ export default function Banner() {
               size="lg"
               variant="outline"
               className="text-base sm:text-lg px-7 sm:px-9 py-5 sm:py-6 
-                         border-2 border-white/70 text-white bg-white/10
-                         hover:bg-white hover:border-white 
+                         border-2 border-[#059587] text-[#059587] bg-white/10
+                         hover:bg-white hover:[#059587]/10 hover:text-[#059587]
                            transition-all duration-300"
             >
               <Mail className="mr-2 h-5 w-5" />

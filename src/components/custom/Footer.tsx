@@ -93,7 +93,7 @@ function Footer() {
                 { label: 'Our Story', href: '#' },
                 { label: 'Mission & Values', href: '#' },
                 { label: 'The Team', href: '#' },
-                { label: 'Careers', href: '#' },
+                { label: 'Careers', href: '#careers' },
                 { label: 'Press & Media', href: '#' },
               ].map(({ label, href }) => (
                 <li key={label}>

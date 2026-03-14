@@ -53,7 +53,7 @@ export default function CareerCard({ job }: CareerCardProps) {
             loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-          <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-gray-800 text-xs font-medium px-3 py-1 rounded-full">
+          <span className="absolute top-3 left-3 bg-[#b2d8d4] backdrop-blur-sm text-[#059587] text-xs font-medium px-3 py-1 rounded-full">
             {job.department}
           </span>
         </div>
@@ -90,7 +90,7 @@ export default function CareerCard({ job }: CareerCardProps) {
               className={`
                 flex items-center justify-center h-9 w-9 rounded-full text-white
                 hover:scale-110 transition-all duration-200 shadow-sm
-                ${isClosingToday ? "bg-amber-500 hover:bg-amber-600" : "bg-gray-900 hover:bg-gray-700"}
+                ${isClosingToday ? "bg-amber-500 hover:bg-amber-600" : "bg-[#059587] hover:bg-[#0d5d55]"}
               `}
               aria-label="View job details"
             >

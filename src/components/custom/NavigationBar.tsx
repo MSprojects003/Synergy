@@ -32,8 +32,8 @@ export default function NavigationBar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                "text-muted-foreground"
+                "text-sm font-medium transition-colors text-[#059587] hover:text-[#0d5d55]",
+                "text-[#059587]"
               )}
             >
               {item.label}
@@ -50,7 +50,7 @@ export default function NavigationBar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="whatsapp"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-[#059587] hover:text-[#0d5d55] transition-colors"
             >
               <MessageCircle className="h-5 w-5" />
             </a>
@@ -59,7 +59,7 @@ export default function NavigationBar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Mail"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-[#059587] hover:text-[#0d5d55] transition-colors"
             >
               <Mail className="h-5 w-5" />
             </a>
@@ -68,7 +68,7 @@ export default function NavigationBar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-[#059587] hover:text-[#0d5d55] transition-colors"
             >
               <Facebook className="h-5 w-5" />
             </a>
@@ -98,7 +98,7 @@ export default function NavigationBar() {
                       key={item.href}
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="text-md sm:text-md font-medium transition-colors hover:text-primary text-foreground/90 hover:text-foreground"
+                      className="text-md sm:text-md font-medium transition-colors text-[#059587] hover:text-[#0d5d55]"
                     >
                       {item.label}
                     </a>
@@ -113,7 +113,7 @@ export default function NavigationBar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="whatsapp"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-[#059587] hover:text-[#0d5d55] transition-colors"
             >
               <MessageCircle className="h-5 w-5" />
             </a>
@@ -122,7 +122,7 @@ export default function NavigationBar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Mail"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-[#059587] hover:text-[#0d5d55] transition-colors"
             >
               <Mail className="h-5 w-5" />
             </a>
@@ -131,7 +131,7 @@ export default function NavigationBar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="text-muted-foreground hover:text-foreground transition-colors"
+              className="text-[#059587] hover:text-[#0d5d55] transition-colors"
             >
               <Facebook className="h-5 w-5" />
             </a>

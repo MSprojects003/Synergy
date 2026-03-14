@@ -17,10 +17,10 @@ export default function Careers() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Carousel opts={{ align: "start", loop: true }} className="w-full">
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-4xl font-thin text-foreground">Our Career Opportunities</h2>
+            <h2 className="text-4xl font-thin text-[#059587]">Our Career Opportunities</h2>
             <div className="flex items-center gap-2">
-              <CarouselPrevious className="static translate-y-0 bg-white border shadow-sm hover:bg-gray-50 h-10 w-10" />
-              <CarouselNext className="static translate-y-0 bg-white border shadow-sm hover:bg-gray-50 h-10 w-10" />
+              <CarouselPrevious className="static translate-y-0 bg-white border shadow-sm hover:bg-gray-50 text-[#059587] h-10 w-10" />
+              <CarouselNext className="static translate-y-0 bg-white border shadow-sm hover:bg-gray-50 text-[#059587] h-10 w-10" />
             </div>
           </div>
 

@@ -113,10 +113,10 @@ export default function Contact() {
           <Card className="rounded-2xl border-0 shadow-none">
             <CardContent className="p-6 flex flex-col gap-5">
               <div>
-                <h3 className="text-2xl text-left font-thin text-gray-900 mb-1">
+                <h3 className="text-2xl text-left font-thin text-[#059587] mb-1">
                   Our Location to Head Quarter
                 </h3>
-                <p className="text-sm text-gray-500 text-left font-thin leading-relaxed">
+                <p className="text-sm text-[#066057] text-left font-thin leading-relaxed">
                    No 391/1, Dalugamgoda,
                    Old Kandy road, Kelaniya,
                     Sri Lanka 
@@ -126,14 +126,14 @@ export default function Contact() {
               <div className="flex flex-col gap-4">
                 {contactInfo.map(({ icon: Icon, title, detail }) => (
                   <div key={title} className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-4 h-4 text-gray-900" />
+                    <div className="w-10 h-10 rounded-full bg-[#b2d8d4] flex items-center justify-center flex-shrink-0">
+                      <Icon className="w-4 h-4 text-[#059587]" />
                     </div>
                     <div>
                       <p className="text-sm font-700 font-bold text-gray-800 leading-tight">
                         {title}
                       </p>
-                      <p className="text-xs text-left font-thin text-gray-500 mt-0.5">{detail}</p>
+                      <p className="text-xs text-left font-thin text-[#066057] mt-0.5">{detail}</p>
                     </div>
                   </div>
                 ))}
@@ -148,9 +148,9 @@ export default function Contact() {
                   <a
                     key={i}
                     href={href}
-                    className="w-8 h-8 rounded-full bg-gray-300 hover:bg-gray-200 flex items-center justify-center transition-colors"
+                    className="w-8 h-8 rounded-full bg-[#b2d8d4] hover:bg-gray-200 flex items-center justify-center transition-colors"
                   >
-                    <Icon className="w-3.5 h-3.5 text-gray-900" />
+                    <Icon className="w-3.5 h-3.5 text-[#059587]" />
                   </a>
                 ))}
               </div>
@@ -179,10 +179,10 @@ export default function Contact() {
               <input type="hidden" name="from_name" value={`${form.firstName} ${form.lastName}`} />
 
               <div>
-                <h2 className="text-2xl font-thin text-left text-gray-900 mb-1">
+                <h2 className="text-2xl font-thin text-left text-[#059587] mb-1">
                   Send us your Query here
                 </h2>
-                <p className="text-sm text-left font-thin text-gray-400">
+                <p className="text-sm text-left font-thin text-[#066057] leading-relaxed">
                   Let us know how to get back to you.
                 </p>
               </div>
@@ -253,10 +253,10 @@ export default function Contact() {
               <hr />
 
               <div>
-                <h2 className="text-2xl font-thin text-left text-gray-900 mb-1">
+                <h2 className="text-2xl font-thin text-left text-[#059587] mb-1">
                   How can we help?
                 </h2>
-                <p className="text-sm font-thin text-left text-gray-400">
+                <p className="text-sm font-thin text-left text-[#066057] leading-relaxed">
                   Feel free to ask a question or simply leave a comment.
                 </p>
               </div>
@@ -295,7 +295,7 @@ export default function Contact() {
               <Button
                 type="submit"
                 disabled={status === "loading"}
-                className="w-fit rounded-lg bg-gray-900 hover:bg-gray-800 text-white text-sm font-bold px-7 h-10 shadow-none"
+                className="w-fit rounded-lg bg-[#059587] hover:bg-[#0d5d55] text-white text-sm font-bold px-7 h-10 shadow-none"
               >
                 {status === "loading" ? "Sending..." : "Send Message"}
               </Button>

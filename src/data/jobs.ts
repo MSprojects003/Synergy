@@ -1,3 +1,5 @@
+ 
+
 // src/data/jobs.ts
 export const CAREERS_EMAIL = "mbaasatheef@gmail.com";
 export interface Job {
@@ -14,30 +16,7 @@ export interface Job {
 }
 
 export const jobs: Job[] = [
-  {
-    id: "senior-full-stack-developer",
-    title: "Senior Full Stack Developer",
-    department: "Engineering",
-    location: "Remote / Hybrid",
-    type: "Full-time",
-    description:
-      "Build scalable web applications using React, Node.js, TypeScript, and modern cloud infrastructure. Work on high-impact features in a collaborative remote-first team.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=2070",
-    closingDate: "2026-03-15",
-    responsibilities: [
-      "Design and build scalable front-end and back-end systems.",
-      "Collaborate with product and design teams to deliver new features.",
-      "Lead code reviews and uphold engineering best practices.",
-      "Mentor junior developers and contribute to team culture.",
-    ],
-    requirements: [
-      "5+ years of full-stack development experience.",
-      "Proficiency in React, Node.js, and TypeScript.",
-      "Experience with cloud platforms (AWS, GCP, or Azure).",
-      "Strong problem-solving and communication skills.",
-    ],
-  },
+ 
   {
     id: "ui-ux-designer",
     title: "UI/UX Designer",

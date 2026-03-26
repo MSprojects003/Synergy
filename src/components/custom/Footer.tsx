@@ -90,7 +90,7 @@ function Footer() {
             </h3>
             <ul className="space-y-3" style={{ fontFamily: "'DM Sans', sans-serif" }}>
               {[
-                { label: 'Our Story', href: '#' },
+                { label: 'Our Story', href: '#about' },
                 { label: 'Mission & Values', href: '#' },
                 { label: 'Our Team', href: '#our-team' },
                 { label: 'Careers', href: '#careers' },
@@ -235,7 +235,7 @@ function Footer() {
 
     <Button
       type="submit"
-      className="w-full bg-[#059578] hover:bg-amber-300 text-zinc-950 font-semibold text-sm h-10 transition-colors duration-200"
+      className="w-full bg-[#059578] hover:bg-[#0d6858] text-zinc-950 font-semibold text-sm h-10 transition-colors duration-200"
       style={{ fontFamily: "'DM Sans', sans-serif" }}
     >
       Subscribe

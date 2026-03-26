@@ -5,6 +5,7 @@ import service3 from "@/assets/pictures/service/service3.jpeg"
 import service4 from "@/assets/pictures/service/service4.jpeg" 
 import service5 from "@/assets/pictures/service/service5.jpeg"
 import service6 from "@/assets/pictures/about1.jpeg"
+import { SectionHeader } from "./SectionHeader";
 
 const services = [
   {
@@ -49,13 +50,10 @@ export default function Services() {
     <section id="services" className="py-16 md:py-20 bg-background">
       <div className="container  ">
         {/* Professional Title + Subtitle */}
-        <div className="text-left mb-2 md:mb-6">
-          <h2 className="text-4xl md:text-5xl font-thin tracking-tight text-[#059587] ">
-            Our Services
-          </h2>
-          <p className="mt-3 md:mt-4 sub-text text-lg md:text-xl text-[#066057] font-thin max-w-3xl mx-0">
-            Empowering your lifestyle with cutting-edge technology solutions
-          </p>
+        <div className="text-left mb-2 md:mb-2">
+          <SectionHeader label="What We Offer" title="Our" accent="Services"
+/>
+
         </div>
 
         {/* First row - 3 cards with custom approximate widths (32% / 35% / 33%) */}
@@ -82,6 +80,7 @@ export default function Services() {
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
               </div>
+
 
               {/* Content */}
               <CardContent className="relative h-full flex flex-col justify-between p-6 md:p-8 text-white z-10">

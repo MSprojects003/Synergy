@@ -1,10 +1,10 @@
 "use client";
 
 import  { useState } from "react";
-import { ArrowUpRight, Calendar, MapPin, Clock } from "lucide-react";
+import { ArrowUpRight,  MapPin, Clock } from "lucide-react";
 import { AlertTriangle } from "lucide-react";
 import type { Job } from "@/data/jobs";
-import JobDetails, { getDateStatus, formatDisplayDate } from "./JobDetails";
+import JobDetails, { getDateStatus } from "./JobDetails";
 
 // ── Props ─────────────────────────────────────────────────────────────────────
 
@@ -23,7 +23,7 @@ export default function CareerCard({ job }: CareerCardProps) {
   if (status === "closed") return null;
 
   const isClosingToday = status === "closing-today";
-  const displayDate = formatDisplayDate(job.closingDate);
+   
 
   return (
     <>
@@ -80,8 +80,7 @@ export default function CareerCard({ job }: CareerCardProps) {
                 isClosingToday ? "text-amber-600" : "text-gray-400"
               }`}
             >
-              <Calendar className="h-3.5 w-3.5" />
-              {isClosingToday ? "Closes today!" : `Closes ${displayDate}`}
+               
             </span>
 
             {/* Arrow button — opens JobDetails dialog */}

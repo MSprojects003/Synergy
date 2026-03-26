@@ -8,6 +8,7 @@ import { CheckCircle2, ArrowRight } from "lucide-react";
 
 import about1 from "@/assets/pictures/about1.jpeg"
 import about2 from "@/assets/pictures/about2.avif"
+import { SectionHeader } from "./SectionHeader";
 // ── Counter hook ──────────────────────────────────────────────────────────────
 function useCountUp(target: number, duration = 1800, start = false) {
   const [count, setCount] = useState(0);
@@ -117,13 +118,11 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
 
             {/* Left — Text */}
-            <div className="p-2 md:p-8 flex flex-col justify-left order-2 md:order-1">
-              <h1
-                className="text-3xl ml-0 text-left md:text-4xl font-thin tracking-tight leading-tight text-[#059587] mb-3"
-                style={{ letterSpacing: "-0.03em" }}
-              >
-                About us
-              </h1>
+            <div className="p-2 md:p-8 flex flex-col justify-left order-2 md:order-1 ">
+             <div className="hidden md:block  ">
+              <SectionHeader label="Who We Are" title="About" accent="us" 
+ /></div>
+
 
               <p className="text-sm text-left text-[#066057] leading-relaxed mb-6 max-w-sm">
                 At our firm, we pride ourselves on delivering tailored solutions
@@ -165,6 +164,9 @@ export default function About() {
                 ))}
               </div>
             </div>
+             <div className="md:hidden">
+              <SectionHeader label="Who We Are" title="About" accent="us" 
+ /></div>
 
             {/* Right — Image */}
             <div className="order-1 md:order-2 h-56 md:h-auto min-h-[300px] bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">

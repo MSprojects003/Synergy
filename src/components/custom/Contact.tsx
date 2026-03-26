@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Phone, Mail, MessageSquare, Facebook,   MailCheck, MessageCircle } from "lucide-react";
-
+ 
 const contactInfo = [
   {
     icon: Phone,
@@ -87,11 +87,15 @@ export default function Contact() {
   };
 
   return (
+    <div className="p-4 md:p-10">
+    
+
     <section
       id="contact"
-      className="bg-[#f0f4f800] min-h-screen p-4 md:p-10 flex items-center justify-center"
+      className="bg-[#f0f4f800] min-h-screen   flex items-center justify-center"
       style={{ fontFamily: "'Manrope', sans-serif" }}
     >
+      
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');`}</style>
 
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -100,6 +104,7 @@ export default function Contact() {
         <div className="flex flex-col gap-4">
           <Card className="rounded-2xl border-0 shadow-none overflow-hidden">
             <CardContent className="p-0">
+              
               <div className="w-full h-48 bg-slate-200 overflow-hidden">
              
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7920.6863201921!2d79.91336145025052!3d6.968782119493024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2581de3230199%3A0xd3f291b0a1cf61ec!2s382%20Old%20Kandy%20Rd%2C%20Kelaniya%2011300!5e0!3m2!1sen!2slk!4v1772720396272!5m2!1sen!2slk" width="100%" height="100%"     style={{ border: 0 }}
@@ -304,5 +309,6 @@ export default function Contact() {
         </Card>
       </div>
     </section>
+    </div>
   );
 }

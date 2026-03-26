@@ -2,8 +2,7 @@
 
 import {
   ArrowUpRight,
-  Calendar,
-  MapPin,
+   MapPin,
   Briefcase,
   AlertTriangle,
 } from "lucide-react";
@@ -59,8 +58,7 @@ interface JobDetailsProps {
 export default function JobDetails({ job, open, onOpenChange }: JobDetailsProps) {
   const status = getDateStatus(job.closingDate);
   const isClosingToday = status === "closing-today";
-  const displayDate = formatDisplayDate(job.closingDate);
-
+ 
   // Opens Gmail compose window directly in a new tab
   const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
     CAREERS_EMAIL
@@ -128,15 +126,7 @@ export default function JobDetails({ job, open, onOpenChange }: JobDetailsProps)
             <Badge variant="secondary" className="gap-1.5 px-2.5 py-1 text-xs font-medium">
               <Briefcase className="h-3 w-3" /> {job.type}
             </Badge>
-            <Badge
-              variant="secondary"
-              className={`gap-1.5 px-2.5 py-1 text-xs font-medium ${
-                isClosingToday ? "bg-amber-100 text-amber-700 hover:bg-amber-100" : ""
-              }`}
-            >
-              <Calendar className="h-3 w-3" />
-              {isClosingToday ? "Closes today!" : `Closes ${displayDate}`}
-            </Badge>
+            
           </div>
 
           <div className="border-t border-gray-100" />

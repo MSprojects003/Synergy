@@ -31,13 +31,13 @@ export function SectionHeader({
       style={{ fontFamily: "'Manrope', sans-serif" }}
     >
       {/* Eyebrow label */}
-      <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-[#059587] font-bold mb-1.5 sm:mb-2">
+      <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-[#059587] font-bold mb-1.5 sm:mb-[-2]">
         {label}
       </p>
 
       {/* Main heading */}
       <h2
-        className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-thin tracking-tight text-foreground flex flex-wrap gap-x-2 ${
+        className={`text-2xl sm:text-4xl md:text-4xl lg:text-5xl font-thin tracking-tight text-foreground flex flex-wrap gap-x-2 ${
           isCenter ? "justify-center" : "justify-start"
         }`}
         style={{ letterSpacing: "-0.03em" }}

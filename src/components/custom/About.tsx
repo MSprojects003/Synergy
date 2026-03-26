@@ -107,7 +107,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="bg-[#f5f6f800] p-2 md:p-6 font-sans"
+      className="bg-[#f5f6f800] p-4 md:p-6 font-sans"
       style={{ fontFamily: "'Manrope', sans-serif" }}
     >
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');`}</style>

@@ -1,13 +1,14 @@
  
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
+import bannerImage from "@/assets/banner/image.png";
 
 export default function Banner() {
   return (
     <section
       className="relative min-h-[70vh] md:min-h-[85vh] flex items-center bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=2070')`,
+        backgroundImage: `url('${bannerImage}')`,
         // Good alternatives (darker / more professional feel):
         // 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=2080'
         // 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
@@ -47,8 +48,7 @@ export default function Banner() {
 
           {/* Subtext – lighter, no stroke needed */}
           <p className="text-lg sm:text-xl md:text-2xl text-gray-100/95 mb-8 md:mb-12 max-w-3xl font-light leading-relaxed">
-            Join a team that values innovation, collaboration, and growth. 
-            Discover exciting career opportunities and shape your future today.
+           Join a team that values innovation, compliance, collaboration, and growth, creating smarter, safer, and more sustainable facility management solutions for the future.
           </p>
 
           {/* Buttons – stack on very small screens, side-by-side otherwise */}
@@ -70,7 +70,7 @@ export default function Banner() {
               size="lg"
               variant="outline"
               className="text-base sm:text-lg px-7 sm:px-9 py-5 sm:py-6 
-                         border-2 border-[#059587] text-[#059587] bg-white/10
+                         border-2 border-[#059587] text-[#059587] bg-white/70
                          hover:bg-white hover:[#059587]/10 hover:text-[#059587]
                            transition-all duration-300"
             >

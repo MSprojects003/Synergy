@@ -6,8 +6,8 @@ import { Separator } from "@/components/ui/separator";
 import { Card, CardContent } from "@/components/ui/card";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 
-import about1 from "@/assets/pictures/about1.jpeg"
-import about2 from "@/assets/pictures/about2.avif"
+import about1 from "@/assets/aboutPic/image.png";
+import about2 from "@/assets/aboutPic/image1.png";
 import { SectionHeader } from "./SectionHeader";
 // ── Counter hook ──────────────────────────────────────────────────────────────
 function useCountUp(target: number, duration = 1800, start = false) {
@@ -115,72 +115,151 @@ export default function About() {
       {/* ── TOP CARD ── */}
       <Card className="max-w-6xl mx-auto mb-4 rounded-2xl border-0 shadow-none overflow-hidden">
         <CardContent className="p-0">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+          {/* Desktop: Standard grid layout (unchanged) */}
+          <div className="hidden md:grid md:grid-cols-2 gap-0">
 
             {/* Left — Text */}
-            <div className="p-2 md:p-8 flex flex-col justify-left order-2 md:order-1 ">
-             <div className="hidden md:block  ">
-              <SectionHeader label="Who We Are" title="About" accent="us" 
- /></div>
+            <div className="p-6 md:p-10 flex flex-col justify-center">
+              <SectionHeader label="WHO WE ARE" title="About" accent="us" align="left" />
 
-
-              <p className="text-sm text-left text-[#066057] leading-relaxed mb-6 max-w-sm">
-                At our firm, we pride ourselves on delivering tailored solutions
-                that empower businesses to thrive. With years of experience across
-                various industries, our dedicated team is committed to driving
-                growth and operational excellence.
+              <p className="text-sm md:text-base text-left text-[#066057] leading-relaxed mb-4 font-light">
+                We are a dynamic facility management and workforce solutions provider committed to transforming how businesses manage their operations through modern, compliance-focused practices. Our team of industry experts is driven by a passion for delivering high-quality, technology-enabled solutions that support both day-to-day operations and long-term strategic goals.
               </p>
 
-              <div className="flex items-center gap-3 flex-wrap">
+              <p className="text-sm md:text-base text-left text-[#066057] leading-relaxed mb-6 font-light">
+                We don't just supply people or services. We deliver tailored, end-to-end workforce and facility management strategies that enhance efficiency, ensure legal compliance, and create sustainable value. By empowering both businesses and workers, we strive to build strong partnerships and develop a future-ready workforce capable of supporting evolving organizational needs.
+              </p>
+
+              <div className="flex items-center gap-3 flex-wrap mb-6">
                 <Button
-                  className="rounded-full bg-[#059587] hover:bg-[#0d5d55] text-white text-sm font-bold px-5 h-10 gap-1.5 shadow-none"
+                  className="rounded-full bg-[#059587] hover:bg-[#0d5d55] text-white text-sm font-semibold px-6 h-10 gap-2 shadow-none"
                   asChild
                 >
-                  <a href="#services">
-                    Get Started <ArrowRight className="w-3.5 h-3.5" />
+                  <a href="#careers">
+                    Get Started <ArrowRight className="w-4 h-4" />
                   </a>
                 </Button>
                 <Button
                   variant="outline"
-                  className="rounded-full border-[#059587] text-[#059587] text-sm font-semibold px-5 h-10 hover:bg-[#059587] hover:text-white shadow-none"
+                  className="rounded-full border-[#059587] text-[#059587] text-sm font-semibold px-6 h-10 hover:bg-[#059587] hover:text-white shadow-none"
                   asChild
                 >
                   <a href="#contact">Contact us</a>
                 </Button>
               </div>
 
-              <Separator className="my-6 bg-gray-100" />
+              <Separator className="my-6 bg-gray-200" />
 
-              {/* ── Animated Stats ── */}
-              <div ref={statsRef} className="flex text-left md:gap-8 flex-row sm:gap-4 font-thin">
+              <div ref={statsRef} className="flex text-left gap-6 md:gap-10 flex-row font-light">
                 {stats.map((s) => (
                   <AnimatedStat
                     key={s.val}
                     val={s.val}
                     lbl={s.lbl}
                     animate={hasAnimated}
-                    
                   />
                 ))}
               </div>
             </div>
-             <div className="md:hidden">
-              <SectionHeader label="Who We Are" title="About" accent="us" 
- /></div>
 
-            {/* Right — Image */}
-            <div className="order-1 md:order-2 h-56 md:h-auto min-h-[300px] bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center">
-              
-                
-                <img src={about1} alt="About" className="w-full h-full object-cover" />
-             
-              <svg className="w-16 h-16 text-slate-400 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="0.8">
-                <circle cx="12" cy="8" r="4" />
-                <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-              </svg>
+            {/* Right — Image with Teal Background */}
+            <div className="bg-[#059587] min-h-[500px] relative flex flex-col justify-between p-6 md:p-10">
+              <div className="flex-1 flex items-center justify-center">
+                <img 
+                  src={about1} 
+                  alt="About" 
+                  className="w-full h-auto object-cover rounded-lg max-w-sm"
+                />
+              </div>
+
+              {/* Purpose Statement */}
+              <div className="mt-12 text-left">
+                <p className="text-white text-left italic font-semibold text-base md:text-lg mb-4">
+                  Purpose Statement
+                </p>
+                <p className="text-white italic text-sm md:text-base font-light leading-relaxed">
+                  To bridge operational gaps by delivering flexible, tech-enabled facility management and workforce solutions that ensure reliability, efficiency, and full statutory compliance.
+                </p>
+              </div>
             </div>
 
           </div>
+
+          {/* Mobile: Custom flex layout with order (new mobile-only changes) */}
+          <div className="md:hidden flex flex-col gap-0">
+
+            {/* MOBILE ONLY: 1. Title */}
+            <div className="order-1 p-3">
+              <SectionHeader label="WHO WE ARE" title="About" accent="us" align="left" />
+            </div>
+
+            {/* MOBILE ONLY: 2. Image with Blue Background */}
+            <div className="order-2 bg-[#059587] min-h-[300px] relative flex flex-col justify-between p-6">
+              <div className="flex-1 flex items-center justify-center">
+                <img 
+                  src={about1} 
+                  alt="About" 
+                  className="w-full h-auto object-cover rounded-lg max-w-sm"
+                />
+              </div>
+
+              <div className="mt-8 text-left">
+                <p className="text-white text-left italic font-semibold text-base mb-4">
+                  Purpose Statement
+                </p>
+                <p className="text-white italic text-sm font-light leading-relaxed">
+                  To bridge operational gaps by delivering flexible, tech-enabled facility management and workforce solutions that ensure reliability, efficiency, and full statutory compliance.
+                </p>
+              </div>
+            </div>
+
+            {/* MOBILE ONLY: 3. Content Paragraphs */}
+            <div className="order-3 p-3">
+              <p className="text-sm text-left text-[#066057] leading-relaxed mb-4 font-light">
+                We are a dynamic facility management and workforce solutions provider committed to transforming how businesses manage their operations through modern, compliance-focused practices. Our team of industry experts is driven by a passion for delivering high-quality, technology-enabled solutions that support both day-to-day operations and long-term strategic goals.
+              </p>
+
+              <p className="text-sm text-left text-[#066057] leading-relaxed mb-6 font-light">
+                We don't just supply people or services. We deliver tailored, end-to-end workforce and facility management strategies that enhance efficiency, ensure legal compliance, and create sustainable value. By empowering both businesses and workers, we strive to build strong partnerships and develop a future-ready workforce capable of supporting evolving organizational needs.
+              </p>
+            </div>
+
+            {/* MOBILE ONLY: 4. Buttons & Stats */}
+            <div className="order-4 pl-2 pr-3 py-6">
+              <div className="flex items-center gap-3 flex-wrap mb-6">
+                <Button
+                  className="rounded-full bg-[#059587] hover:bg-[#0d5d55] text-white text-sm font-semibold px-6 h-10 gap-2 shadow-none"
+                  asChild
+                >
+                  <a href="#careers">
+                    Get Started <ArrowRight className="w-4 h-4" />
+                  </a>
+                </Button>
+                <Button
+                  variant="outline"
+                  className="rounded-full border-[#059587] text-[#059587] text-sm font-semibold px-6 h-10 hover:bg-[#059587] hover:text-white shadow-none"
+                  asChild
+                >
+                  <a href="#contact">Contact us</a>
+                </Button>
+              </div>
+
+              <Separator className="mb-6 bg-gray-200" />
+
+              <div ref={statsRef} className="flex text-left gap-6 flex-row font-light">
+                {stats.map((s) => (
+                  <AnimatedStat
+                    key={s.val}
+                    val={s.val}
+                    lbl={s.lbl}
+                    animate={hasAnimated}
+                  />
+                ))}
+              </div>
+            </div>
+
+          </div>
+
         </CardContent>
       </Card>
 
@@ -232,3 +311,4 @@ export default function About() {
     </section>
   );
 }
+

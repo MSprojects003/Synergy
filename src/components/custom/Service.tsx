@@ -1,10 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
-import service1 from "@/assets/pictures/service/service1.jpeg"
 import service2 from "@/assets/pictures/service/service2.jpeg"
 import service3 from "@/assets/pictures/service/service3.jpeg"
 import service4 from "@/assets/pictures/service/service4.jpeg" 
 import service5 from "@/assets/pictures/service/service5.jpeg"
 import service6 from "@/assets/pictures/about1.jpeg"
+import customized_facility from "@/assets/pictures/service/customized-faculty/image.png"
 import { SectionHeader } from "./SectionHeader";
 
 const services = [
@@ -40,8 +40,8 @@ const services = [
   {
     title: "Customized Facility Management",
     description: "Strategic workforce planning and technology-integrated solutions built around each client's unique operational challenges and compliance needs.",
-    imageUrl: service1,
-    alt: "Tablets",
+    imageUrl: customized_facility,
+    alt: "Customized Facility",
   },
 ];
 
@@ -63,9 +63,9 @@ export default function Services() {
               key={index}
               className={`
                 relative overflow-hidden group cursor-pointer h-64 md:h-80 flex-1 
-                ${index === 0 ? "lg:basis-[30%]" : ""}
-                ${index === 1 ? "lg:basis-[45%]" : ""}
-                ${index === 2 ? "lg:basis-[25%]" : ""}
+                ${index === 0 ? "lg:basis-[45%]" : ""}
+                ${index === 1 ? "lg:basis-[23%]" : ""}
+                ${index === 2 ? "lg:basis-[32%]" : ""}
                 transition-all duration-300 hover:shadow-xl
               `}
             >

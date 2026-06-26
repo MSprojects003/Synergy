@@ -1,5 +1,5 @@
 // src/data/jobs.ts
-export const CAREERS_EMAIL = "mbaasatheef@gmail.com";
+export const CAREERS_EMAIL = "synergyfmservices@gmail.com";
 
 export interface Job {
   id: string;

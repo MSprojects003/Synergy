@@ -69,10 +69,11 @@ export default function Contact() {
                   style={{ border: 0 }}
                   loading="lazy"
                   allowFullScreen
+                  
                   referrerPolicy="no-referrer-when-downgrade"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.690732217544!2d-0.02327!3d51.50501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487602b9a65c4249%3A0x2e77e6f6d00b9b5e!2sOne%20Canada%20Square!5e0!3m2!1sen!2suk!4v1680000000000!5m2!1sen!2suk"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.349499032447!2d79.9178191!3d6.968031799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259d44dd4d767%3A0x270eba61ba1ea0aa!2sSynergy%20Facility%20Management%20Services!5e0!3m2!1sen!2slk!4v1782497587745!5m2!1sen!2slk"
                 />
-              </div>
+               </div>
             </CardContent>
           </Card>
           <hr />
@@ -85,7 +86,9 @@ export default function Contact() {
                   Our Location to Head Quarter
                 </h3>
                 <p className="text-sm text-[#066057] text-left font-thin leading-relaxed">
-                  Level 9, One Canada Square, Canary Wharf, E14 5AA, London.
+                No 391/1, Dalugamgoda,
+Old Kandy road, Kelaniya,
+Sri Lanka
                 </p>
               </div>
 

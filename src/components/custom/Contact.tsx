@@ -111,7 +111,7 @@ Sri Lanka
               {/* Social Icons */}
               <div className="flex gap-2 pt-1">
                 {[
-                  { icon: Facebook, href: "#" },
+                  { icon: Facebook, href: "https://www.facebook.com/share/1HbFa3k3PW/" },
                   { icon: Twitter, href: "#" },
                   { icon: Linkedin, href: "#" },
                 ].map(({ icon: Icon, href }, i) => (

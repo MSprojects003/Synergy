@@ -12,12 +12,12 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Call our support center",
-    detail: "+52656-565-560",
+    detail: "+94 76 214 6244",
   },
   {
     icon: Mail,
     title: "Email our support center",
-    detail: "support@spark.com",
+    detail: "synergyfmservices@gmail.com",
   },
   {
     icon: MessageSquare,

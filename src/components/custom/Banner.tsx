@@ -40,7 +40,7 @@ export default function Banner() {
           >
             Welcome to Synergy
             <br className="sm:hidden md:block" />
-            <span className="text-[#18181808] [-webkit-text-stroke:1px_white] text-stroke-[1px] text-stroke-white">
+            <span className="text-white   ">
               Build Your Future
             </span>{" "}
             With Us
